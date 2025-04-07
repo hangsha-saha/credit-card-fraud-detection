@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Credit Card Fraud Detection</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>🛡️ Credit Card Fraud Detection</h1>
+        <form action="/predict" method="post">
+            <label for="time">Time (in seconds):</label>
+            <input type="number" name="time" step="any" required><br>
+
+            <label for="amount">Transaction Amount ($):</label>
+            <input type="number" name="amount" step="any" required><br>
+
+            <button type="submit">Detect Fraud</button>
+        </form>
+
+        {% if result %}
+            <div class="result">{{ result }}</div>
+        {% endif %}
+    </div>
+</body>
+</html>
