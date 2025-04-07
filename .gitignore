@@ -1,0 +1,33 @@
+# Byte-compiled / cache files
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+
+# Environment
+env/
+venv/
+ENV/
+*.env
+*.DS_Store
+
+# Jupyter Notebook checkpoints
+.ipynb_checkpoints/
+
+# Python egg metadata
+*.egg-info/
+dist/
+build/
+
+# Model artifacts (if not needed in repo)
+*.pkl
+
+# Dataset (too large for GitHub)
+creditcard.csv
+
+# VS Code settings
+.vscode/
+
+# OS files
+Thumbs.db
+.DS_Store
