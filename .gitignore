@@ -22,8 +22,9 @@ build/
 # Model artifacts (if not needed in repo)
 *.pkl
 
-# Dataset (too large for GitHub)
+# Dataset (too large for GitHub) Dataset are available in Kaggle
 creditcard.csv
+creditcard_pca.csv
 
 # VS Code settings
 .vscode/
