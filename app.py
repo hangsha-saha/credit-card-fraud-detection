@@ -1,8 +1,6 @@
 from flask import Flask, render_template, request
 import numpy as np
 import pickle
-import random
-from v_dictionary import v_dictionary
 
 app = Flask(__name__)
 
@@ -18,13 +16,12 @@ def predict():
     try:
         time = float(request.form['time'])
         amount = float(request.form['amount'])
+        pc1 = float(request.form['pc1'])
+        pc2 = float(request.form['pc2'])
+        pc3 = float(request.form['pc3'])
 
-        # Randomly pick V1–V28 values
-        random_key = random.choice(list(v_dictionary.keys()))
-        v_values = v_dictionary[random_key]
-
-        # Full feature input: [Time, V1..V28, Amount]
-        input_data = [time] + v_values + [amount]
+        # Construct input for model
+        input_data = [time, pc1, pc2, pc3, amount]
         input_array = np.array(input_data).reshape(1, -1)
 
         # Make prediction
